@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Running a program.</h1>
+<p>Copy one of the programs, paste it into the <a href="https://python.microbit.org/" target="_blank" rel="noopener noreferrer">MicroBit</a> and then run it, change it, and run it again 🙂</p>
+    <h2>Program 1</h2>
+    <pre><code>
+# Imports go at the top
+from microbit import *
+
+# Code in a 'while True:' loop repeats forever
+while True:
+    display.show(Image.HEART)
+    sleep(1000)
+    display.scroll('Hello')
+    </code></pre>
+    <h2>Program 2</h2>
+    <pre><code>
+# Imports go at the top
+from microbit import *
+
+#Use variables to record the name and picture
+nameA = 'Ada'
+pictureA = Image.MUSIC_CROTCHET
+
+# Code in a 'while True:' loop repeats forever
+while True:
+    display.scroll(nameA)
+    display.show(pictureA)
+        </code></pre>
+    <h2>Program 3</h2>
+    <pre><code>
+# Imports go at the top
+from microbit import *
+
+#Use variables to record the names and pictures
+nameA = 'Ada'
+pictureA = Image.MUSIC_CROTCHET
+nameB = 'Muhammad'
+pictureB = Image.BUTTERFLY
+default_image = Image.ASLEEP
+
+# Code in a 'while True:' loop repeats forever
+while True:
+    #Show this for button A..
+    if button_a.is_pressed():
+        display.scroll(nameA)
+        display.show(pictureA)
+        sleep(1000)
+    #or show this for button B..
+    elif button_b.is_pressed():
+        display.scroll(nameB)
+        display.show(pictureB)
+        sleep(1000)
+    #or this when no button is presssed..
+    else:
+        display.show(default_image)
+    </code></pre>
+</body>
+</html>
